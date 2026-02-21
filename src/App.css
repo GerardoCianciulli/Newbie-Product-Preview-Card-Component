@@ -1,0 +1,159 @@
+:root {
+  --ff-serif: 'Fraunces', serif;
+  --ff-sans-serif: 'Montserrat', sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+
+  --green: hsl(158, 36%, 37%);
+  --dark-green: hsl(156, 59%, 25%);
+  --cream: hsl(30, 38%, 92%);
+  --dark-gray: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+
+  object-fit: cover;
+}
+
+body {
+  font-family: var(--ff-sans-serif);
+  font-weight: var(--fw-regular);
+  font-size: .875rem;
+  color: var(--dark-gray);
+  justify-content: center;
+  background-color: var(--cream);
+}
+
+.product-preview-card {
+  border-radius: 8px;
+  width: 600px;
+  min-height: 456px;
+  background-color: var(--white);
+  display: flex;
+  overflow: hidden;
+}
+
+.section {
+  flex: 1;
+}
+
+.desktop-image {
+  height: 100%;
+  display: block;
+}
+
+.mobile-image {
+  display: none;
+}
+
+.product-details {
+  padding: 32px;
+}
+
+.product-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.product-type {
+  text-transform: uppercase;
+  font-size: .75rem;
+  letter-spacing: 5px;
+  line-height: 1.2em;
+}
+
+.bold {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-bold);
+  line-height: 1em;
+}
+
+.product-name {
+  color: var(--black);
+  font-size: 2rem;
+}
+
+.product-description {
+  line-height: 1.6em;
+}
+
+.cost-widget {
+  display: flex;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.sale-price {
+  color: var(--green);
+  margin-right: 32px;
+  font-size: 2rem;
+}
+
+.price {
+  text-decoration: line-through;
+  font-size: .8125rem;
+}
+
+button {
+  width: 236px;
+  height: 50px;
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 8px;
+  font-size: .875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.14285714em;
+}
+
+button:hover {
+  background-color: var(--dark-green);
+}
+
+.cart-icon {
+  margin-right: 8px;
+  fill: white;
+}
+
+@media (max-width: 632px) {
+  .product-preview-card {
+    flex-direction: column;
+    width: 350px;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    height: 100%;
+    display: block;
+  }
+
+  .cost-widget {
+    margin: 24px 0;
+  }
+
+  button {
+    width: 100%;
+  }
+}
