@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Product Preview Card Component](https://gerardocianciulli.github.io/newbie-product-preview-card-component/)
 
 ## My process
 

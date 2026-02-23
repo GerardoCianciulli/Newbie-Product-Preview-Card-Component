@@ -50,7 +50,7 @@ body {
   overflow: hidden;
 }
 
-.section {
+.side {
   flex: 1;
 }
 
@@ -86,7 +86,7 @@ body {
   line-height: 1em;
 }
 
-.product-name {
+.product-name, h1 {
   color: var(--black);
   font-size: 2rem;
 }

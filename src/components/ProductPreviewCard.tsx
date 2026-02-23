@@ -13,17 +13,17 @@ type ProductPreviewCardProps = {
 
 const ProductPreviewCard = ({ title, type, description, salePrice, price, desktopImage:Desktop, mobileImage:Mobile}: ProductPreviewCardProps) => {
     return (
-        <div className="product-preview-card">
-            <div className="section" >
+        <section className="product-preview-card" aria-label={title}>
+            <div className="side" >
                 <img className="desktop-image" src={Desktop} alt={title} />
                 <img className="mobile-image" src={Mobile} alt={title} />
             </div>
 
-            <div className="section">
+            <div className="side">
                 <div className="product-details">
                     <div className="product-header">
-                        <p className="product-type">{type}</p>
-                        <p className="product-name bold">{title}</p>
+                        <h2 className="product-type">{type}</h2>
+                        <h3 className="product-name bold">{title}</h3>
 
                         <p className="product-description">
                             {description}
@@ -38,7 +38,7 @@ const ProductPreviewCard = ({ title, type, description, salePrice, price, deskto
                     <Button text="Add to Cart" icon={CartIcon} />
                 </div>
             </div>
-        </div>)
+        </section>)
 }
 
 export default ProductPreviewCard
